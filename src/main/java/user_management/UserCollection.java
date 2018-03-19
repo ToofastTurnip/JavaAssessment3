@@ -43,7 +43,6 @@ public class UserCollection extends ArrayList<User>{
     }
 
     public int createUser(String name, String email, String password) throws EmailNotAvailableException, PasswordTooSimpleException, InvalidEmailException {
-        int id = 0;
         boolean ableToCreateAccount = false;
         for (User user : this) {
             if (!user.getEmail().equals(email)) {
@@ -62,8 +61,7 @@ public class UserCollection extends ArrayList<User>{
         }
         if (ableToCreateAccount) {
             this.add(new User(this.size(), name, email, password));
-            id = this.size();
-            return id;
+            return this.size();
         }
         if (!emailGood(email)) {
             throw new InvalidEmailException();
