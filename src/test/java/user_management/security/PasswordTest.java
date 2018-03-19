@@ -21,4 +21,5 @@ public class PasswordTest {
 
         assertTrue(p.matches("password"));
     }
+
 }

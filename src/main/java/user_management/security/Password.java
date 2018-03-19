@@ -14,18 +14,16 @@ public class Password {
     }
 
     public boolean matches(String password_plaintext) {
-        // Note: normally a match method would include a check to see if the hash is valid but for this exam we will
-        //       assume that all the passwords we will check are valid. All of the password hashes in the users.json
-        //       file are valid so there should be no worry about this as long as you don't overwrite them manually.
-
-        // hashToCheckAgainst = this.hash
-        // hasher.check(password, hashToCheckAgainst)
-        // return true if check is true
-        // return false if check is false
-        return false;
+        boolean password_verified = false;
+        if (null == hash || !hash.startsWith("$2a$"))
+            throw new java.lang.IllegalArgumentException("Invalid hash provided for comparison");
+        password_verified = BCrypt.checkpw(password_plaintext, hash);
+        return(password_verified);
+        // Sure whatever
     }
 
     public String getHash() {
         return hash;
     }
+
 }
