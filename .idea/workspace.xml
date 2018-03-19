@@ -31,8 +31,8 @@
           <file leaf-file-name="UserCollection.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/user_management/UserCollection.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="421">
-                  <caret line="65" column="43" lean-forward="false" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+                <state relative-caret-position="62">
+                  <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -78,8 +78,8 @@
           <file leaf-file-name="UserCollectionTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/user_management/UserCollectionTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1035">
-                  <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+                <state relative-caret-position="630">
+                  <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -376,31 +376,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UserCollectionInitializerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="user_management.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="assessment3" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="user_management" />
-      <option name="MAIN_CLASS_NAME" value="user_management.UserCollectionInitializerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration name="UserCollectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -415,6 +390,31 @@
       <option name="MAIN_CLASS_NAME" value="user_management.UserCollectionTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="UserCollectionTest.attemptLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="user_management.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="assessment3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="user_management" />
+      <option name="MAIN_CLASS_NAME" value="user_management.UserCollectionTest" />
+      <option name="METHOD_NAME" value="attemptLogin" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -513,18 +513,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.UserTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.UserCollectionInitializerTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.PasswordTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserCollectionTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PasswordTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.UserCollectionTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UserCollectionTest.attemptLogin" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.UserCollectionTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PasswordTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.UserCollectionInitializerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserCollectionTest.attemptLogin" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AuthenticatorTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PasswordTest" />
       </list>
     </recent_temporary>
   </component>
@@ -541,26 +541,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521465769417</updated>
-      <workItem from="1521465772786" duration="20510000" />
+      <workItem from="1521465772786" duration="20971000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AuthenticatorTest - 2018.03.19 at 14h 02m 30s.xml">
-      <configuration name="AuthenticatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserCollectionTest - 2018.03.19 at 14h 42m 57s.xml">
-      <configuration name="UserCollectionTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserCollectionTest - 2018.03.19 at 14h 49m 10s.xml">
-      <configuration name="UserCollectionTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserCollectionTest - 2018.03.19 at 15h 05m 54s.xml">
-      <configuration name="UserCollectionTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserCollectionTest - 2018.03.19 at 15h 08m 26s.xml">
-      <configuration name="UserCollectionTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserCollectionTest - 2018.03.19 at 15h 15m 59s.xml">
       <configuration name="UserCollectionTest" configurationId="JUnit" />
     </history-entry>
@@ -576,9 +561,24 @@
     <history-entry file="UserCollectionTest - 2018.03.19 at 15h 34m 09s.xml">
       <configuration name="UserCollectionTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserCollectionTest - 2018.03.19 at 15h 36m 10s.xml">
+      <configuration name="UserCollectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserCollectionTest - 2018.03.19 at 15h 41m 27s.xml">
+      <configuration name="UserCollectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserCollectionTest - 2018.03.19 at 15h 42m 10s.xml">
+      <configuration name="UserCollectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserCollectionTest - 2018.03.19 at 15h 43m 12s.xml">
+      <configuration name="UserCollectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserCollectionTest_attemptLogin - 2018.03.19 at 15h 38m 32s.xml">
+      <configuration name="UserCollectionTest.attemptLogin" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20510000" />
+    <option name="totallyTimeSpent" value="20971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-319" y="-1057" width="1920" height="1057" extended-state="0" />
@@ -592,7 +592,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26715177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -840,8 +840,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/user_management/UserCollectionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+        <state relative-caret-position="630">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -850,8 +850,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/user_management/UserCollection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="65" column="43" lean-forward="false" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+        <state relative-caret-position="62">
+          <caret line="46" column="18" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

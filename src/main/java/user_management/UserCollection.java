@@ -29,20 +29,22 @@ public class UserCollection extends ArrayList<User>{
     }
 
     public User attemptLogin(String email, String password) {
+        User userToReturn = new User();
         try {
             for (User user : this) {
                 if (user.getEmail().equals(email) && user.getPassword().getHash().equals(Password.hashPassword(password))) {
-                    return user;
+                    userToReturn = user;
                 }
             }
             throw new UserAuthenticationFailedException();
         } catch (UserAuthenticationFailedException e) {
             System.out.println("Incorrect email or password");
         }
-        return null;
+        return userToReturn;
     }
 
     public int createUser(String name, String email, String password) {
+        int id = 0;
         boolean ableToCreateAccount = true;
         try {
             for (User user : this) {
@@ -61,7 +63,7 @@ public class UserCollection extends ArrayList<User>{
             }
             if (ableToCreateAccount) {
                 this.add(new User(this.size(), name, email, password));
-                return this.size();
+                id = this.size();
             }
         } catch (EmailNotAvailableException e) {
             System.out.println("No can do my dude");
@@ -70,7 +72,7 @@ public class UserCollection extends ArrayList<User>{
         } catch (InvalidEmailException t) {
             System.out.println("Bad email");
         }
-        return 0;
+        return id;
     }
 
     private boolean passwordGood(String password){
