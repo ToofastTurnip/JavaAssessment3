@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class ElementTest {
+
     private Element element;
 
     @Before
