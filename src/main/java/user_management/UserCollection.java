@@ -38,37 +38,30 @@ public class UserCollection extends ArrayList<User>{
         if (userToReturn.getPassword().matches(password)) {
             return userToReturn;
         }
+        System.out.println("Invalid username or password");
         throw new UserAuthenticationFailedException();
     }
 
     public int createUser(String name, String email, String password) {
         int id = 0;
         boolean ableToCreateAccount = true;
-        try {
-            for (User user : this) {
-                if (user.getEmail().equals(email)) {
-                    ableToCreateAccount = false;
-                    throw new EmailNotAvailableException();
-                }
-            }
-            if (!passwordGood(password)) {
+        for (User user : this) {
+            if (user.getEmail().equals(email)) {
                 ableToCreateAccount = false;
-                throw new PasswordTooSimpleException();
+                throw new EmailNotAvailableException();
             }
-            if (!emailGood(email)) {
-                ableToCreateAccount = false;
-                throw new InvalidEmailException();
-            }
-            if (ableToCreateAccount) {
-                this.add(new User(this.size(), name, email, password));
-                id = this.size();
-            }
-        } catch (EmailNotAvailableException e) {
-            System.out.println("No can do my dude");
-        } catch (PasswordTooSimpleException r) {
-            System.out.println("Bad password");
-        } catch (InvalidEmailException t) {
-            System.out.println("Bad email");
+        }
+        if (!passwordGood(password)) {
+            ableToCreateAccount = false;
+            throw new PasswordTooSimpleException();
+        }
+        if (!emailGood(email)) {
+            ableToCreateAccount = false;
+            throw new InvalidEmailException();
+        }
+        if (ableToCreateAccount) {
+            this.add(new User(this.size(), name, email, password));
+            id = this.size();
         }
         return id;
     }
