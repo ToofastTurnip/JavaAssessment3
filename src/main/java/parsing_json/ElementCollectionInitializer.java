@@ -14,7 +14,7 @@ public class ElementCollectionInitializer {
         return elementCollection;
     }
 
-    public static String fileToString() {
+    private static String fileToString() {
         StringBuilder result = new StringBuilder("");
         ClassLoader classLoader = ElementCollectionInitializer.class.getClassLoader();
         File file = new File(classLoader.getResource("periodic_table.json").getFile());
