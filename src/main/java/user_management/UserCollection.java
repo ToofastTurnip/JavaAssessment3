@@ -33,10 +33,9 @@ public class UserCollection extends ArrayList<User>{
             for (int i = 0; i < this.size(); i++) {
                 if (this.get(i).getEmail().equals(email) && this.get(i).getPassword().equals(Password.hashPassword(password))) {
                     return this.get(i);
-                } else {
-                    throw new UserAuthenticationFailedException();
                 }
             }
+            throw new UserAuthenticationFailedException();
         } catch (UserAuthenticationFailedException e) {
             System.out.println("Incorrect email or password");
         }
@@ -46,8 +45,8 @@ public class UserCollection extends ArrayList<User>{
     public int createUser(String name, String email, String password) {
         boolean ableToCreateAccount = true;
         try {
-            for (int i = 0; i < this.size(); i++) {
-                if (this.get(i).getEmail().equals(email)) {
+            for (User user : this) {
+                if (user.getEmail().equals(email)) {
                     throw new EmailNotAvailableException();
                 }
             }
