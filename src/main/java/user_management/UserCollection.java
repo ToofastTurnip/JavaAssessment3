@@ -47,23 +47,30 @@ public class UserCollection extends ArrayList<User>{
         try {
             for (User user : this) {
                 if (user.getEmail().equals(email)) {
+                    ableToCreateAccount = false;
                     throw new EmailNotAvailableException();
                 }
             }
             if (!passwordGood(password)) {
+                ableToCreateAccount = false;
                 throw new PasswordTooSimpleException();
             }
             if (!emailGood(email)) {
+                ableToCreateAccount = false;
                 throw new InvalidEmailException();
             }
-        } catch (EmailNotAvailableException | PasswordTooSimpleException | InvalidEmailException e) {
-            ableToCreateAccount = false;
+            if (ableToCreateAccount) {
+                this.add(new User(this.size(), name, email, password));
+                return this.size();
+            }
+        } catch (EmailNotAvailableException e) {
             System.out.println("No can do my dude");
+        } catch (PasswordTooSimpleException r) {
+            System.out.println("Bad password");
+        } catch (InvalidEmailException t) {
+            System.out.println("Bad email");
         }
-        if (ableToCreateAccount) {
-            this.add(new User(this.size(), name, email, password));
-            return this.size();
-        } else return 0;
+        return 0;
     }
 
     private boolean passwordGood(String password){
