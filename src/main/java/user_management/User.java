@@ -52,7 +52,7 @@ public class User {
 
     @Override
     public String toString() {
-        return null;
+        return getName() + " - " + getEmail();
     }
 
     @Override

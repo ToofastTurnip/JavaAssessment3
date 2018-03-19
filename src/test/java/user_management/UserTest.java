@@ -38,4 +38,9 @@ public class UserTest {
         Assert.assertEquals("password", user.getPassword());
     }
 
+    @Test
+    public void toStringOverrideTest() {
+        Assert.assertEquals("Mitch Taylor - dingusman@gmail.com", user.toString());
+    }
+
 }
