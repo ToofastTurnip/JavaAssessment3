@@ -4,16 +4,23 @@ import user_management.security.Password;
 
 public class User {
 
-    private String email;
     private int id;
+    private String email;
     private String name;
     private Password password;
 
     public User() {}
 
-    public User(String email, int id, String name, String password) {
-        this.email = email;
+    public User(int id, String name, String email, String password) {
         this.id = id;
+        this.email = email;
+        this.name = name;
+        this.password = new Password(password);
+    }
+
+    public User(int id, String name, String email, Password password) {
+        this.id = id;
+        this.email = email;
         this.name = name;
         this.password = password;
     }
@@ -47,7 +54,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = new Password(password);
     }
 
     public void setPassword(Password password) {
