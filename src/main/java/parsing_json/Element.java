@@ -26,6 +26,8 @@ public class Element {
     private int ypos;
     private ArrayList<Integer> shells;
 
+    public Element() {}
+
     public Element(String name, String appearance, double atomic_mass, double boil, String category, String color, double density, String discovered_by, double melt, double molar_heat, String named_by, int number, int period, String phase, String source, String spectral_img, String summary,String symbol, int xpos, int ypos, ArrayList<Integer> shells) {
         this.name = name;
         this.appearance = appearance;
@@ -133,5 +135,88 @@ public class Element {
     public ArrayList<Integer> getShells() {
         return shells;
     }
-    
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAppearance(String appearance) {
+        this.appearance = appearance;
+    }
+
+    public void setAtomic_mass(double atomic_mass) {
+        this.atomic_mass = atomic_mass;
+    }
+
+    public void setBoil(double boil) {
+        this.boil = boil;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setDensity(double density) {
+        this.density = density;
+    }
+
+    public void setDiscovered_by(String discovered_by) {
+        this.discovered_by = discovered_by;
+    }
+
+    public void setMelt(double melt) {
+        this.melt = melt;
+    }
+
+    public void setMolar_heat(double molar_heat) {
+        this.molar_heat = molar_heat;
+    }
+
+    public void setNamed_by(String named_by) {
+        this.named_by = named_by;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public void setPeriod(int period) {
+        this.period = period;
+    }
+
+    public void setPhase(String phase) {
+        this.phase = phase;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public void setSpectral_img(String spectral_img) {
+        this.spectral_img = spectral_img;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public void setXpos(int xpos) {
+        this.xpos = xpos;
+    }
+
+    public void setYpos(int ypos) {
+        this.ypos = ypos;
+    }
+
+    public void setShells(ArrayList<Integer> shells) {
+        this.shells = shells;
+    }
 }
