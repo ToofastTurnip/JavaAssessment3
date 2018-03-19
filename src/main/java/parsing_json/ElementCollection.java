@@ -5,15 +5,20 @@ import java.util.ArrayList;
 public class ElementCollection extends ArrayList<Element>{
 
     public Element findByAtomicNumber(int atomic_number) {
-        for (int i = 0; i < this.size(); i++) {
-            if (this.get(i).getNumber() == atomic_number) {
-                return this.get(i);
+        for (Element element : this) {
+            if (element.getNumber() == atomic_number) {
+                return element;
             }
         }
         return null;
     }
 
     public Element findByName(String name) {
+        for (Element element : this) {
+            if (element.getName().equals(name)) {
+                return element;
+            }
+        }
         return null;
     }
 
