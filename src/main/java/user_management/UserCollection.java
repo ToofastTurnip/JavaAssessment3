@@ -28,19 +28,17 @@ public class UserCollection extends ArrayList<User>{
         return null;
     }
 
-    public User attemptLogin(String email, String password) {
-        User userToReturn = new User();
-        try {
-            for (User user : this) {
-                if (user.getEmail().equals(email) && user.getPassword().getHash().equals(Password.hashPassword(password))) {
-                    userToReturn = user;
-                }
+    public User attemptLogin(String email, String password) throws UserAuthenticationFailedException {
+        User userToReturn = null;
+        for (User user : this) {
+            if (user.getEmail().equals(email)) {
+                userToReturn = user;
             }
-            throw new UserAuthenticationFailedException();
-        } catch (UserAuthenticationFailedException e) {
-            System.out.println("Incorrect email or password");
         }
-        return userToReturn;
+        if (userToReturn.getPassword().matches(password)) {
+            return userToReturn;
+        }
+        throw new UserAuthenticationFailedException();
     }
 
     public int createUser(String name, String email, String password) {
