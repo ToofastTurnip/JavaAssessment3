@@ -2,6 +2,9 @@ package user_management;
 
 import user_management.security.Password;
 import user_management.security.UserAuthenticationFailedException;
+import user_management.validation.EmailNotAvailableException;
+import user_management.validation.InvalidEmailException;
+import user_management.validation.PasswordTooSimpleException;
 
 import java.util.ArrayList;
 
@@ -41,12 +44,31 @@ public class UserCollection extends ArrayList<User>{
     }
 
     public int createUser(String name, String email, String password) {
-        this.add(new User(this.size(), name, email, password));
-        return this.size();
+        boolean ableToCreateAccount = true;
+        try {
+            for (int i = 0; i < this.size(); i++) {
+                if (this.get(i).getEmail().equals(email)) {
+                    throw new EmailNotAvailableException();
+                }
+            }
+            if (!passwordGood(password)) {
+                throw new PasswordTooSimpleException();
+            }
+            if (!emailGood(email)) {
+                throw new InvalidEmailException();
+            }
+        } catch (EmailNotAvailableException | PasswordTooSimpleException | InvalidEmailException e) {
+            ableToCreateAccount = false;
+            System.out.println("No can do my dude");
+        }
+        if (ableToCreateAccount) {
+            this.add(new User(this.size(), name, email, password));
+            return this.size();
+        } else return 0;
     }
 
     private boolean passwordGood(String password){
-        String regex = "^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$";
+        String regex = "(^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$)";
         return password.matches(regex);
     }
 

@@ -68,7 +68,8 @@ public class User {
 
     @Override
     public boolean equals(Object obj) {
-        return false;
+        User checkingUser = (User) obj;
+        return checkingUser.getName().equals(this.getName()) && checkingUser.getEmail().equals(this.getEmail()) && checkingUser.getId() == this.getId();
     }
 
 }
