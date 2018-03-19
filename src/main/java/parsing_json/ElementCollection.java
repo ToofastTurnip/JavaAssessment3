@@ -20,4 +20,5 @@ public class ElementCollection extends ArrayList<Element>{
     public ElementCollection where(String fieldName, Object value) {
         return null;
     }
+
 }

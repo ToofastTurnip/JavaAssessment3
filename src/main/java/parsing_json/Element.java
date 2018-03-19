@@ -219,4 +219,5 @@ public class Element {
     public void setShells(ArrayList<Integer> shells) {
         this.shells = shells;
     }
+
 }
