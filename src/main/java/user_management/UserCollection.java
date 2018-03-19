@@ -42,28 +42,36 @@ public class UserCollection extends ArrayList<User>{
         throw new UserAuthenticationFailedException();
     }
 
-    public int createUser(String name, String email, String password) {
+    public int createUser(String name, String email, String password) throws EmailNotAvailableException, PasswordTooSimpleException, InvalidEmailException {
         int id = 0;
-        boolean ableToCreateAccount = true;
+        boolean ableToCreateAccount = false;
         for (User user : this) {
-            if (user.getEmail().equals(email)) {
-                ableToCreateAccount = false;
-                throw new EmailNotAvailableException();
+            if (!user.getEmail().equals(email)) {
+                ableToCreateAccount = true;
             }
         }
-        if (!passwordGood(password)) {
+        if (passwordGood(password)) {
+            ableToCreateAccount = true;
+        } else if (!passwordGood(password)) {
             ableToCreateAccount = false;
-            throw new PasswordTooSimpleException();
         }
-        if (!emailGood(email)) {
+        if (emailGood(email)) {
+            ableToCreateAccount = true;
+        } else if (!emailGood(email)) {
             ableToCreateAccount = false;
-            throw new InvalidEmailException();
         }
         if (ableToCreateAccount) {
             this.add(new User(this.size(), name, email, password));
             id = this.size();
+            return id;
         }
-        return id;
+        if (!emailGood(email)) {
+            throw new InvalidEmailException();
+        }
+        if (!passwordGood(password)) {
+            throw new PasswordTooSimpleException();
+        }
+        throw new EmailNotAvailableException();
     }
 
     private boolean passwordGood(String password){
