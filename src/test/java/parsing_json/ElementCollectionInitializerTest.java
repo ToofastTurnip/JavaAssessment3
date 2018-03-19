@@ -12,4 +12,5 @@ public class ElementCollectionInitializerTest {
     public void generate() throws IOException {
         assertEquals(119, ElementCollectionInitializer.generate().size());
     }
+
 }
