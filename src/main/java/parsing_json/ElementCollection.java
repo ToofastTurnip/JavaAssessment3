@@ -29,23 +29,23 @@ public class ElementCollection extends ArrayList<Element>{
         ElementCollection allElements = ElementCollectionInitializer.generate();
         ElementCollection elementsThatMatchSearch = new ElementCollection();
         if (fieldName.equals("name")) {
-            for (int i = 0; i < allElements.size(); i++) {
-                if (allElements.get(i).getName().equals(value)) {
-                    elementsThatMatchSearch.add(allElements.get(i));
+            for (Element allElement : allElements) {
+                if (allElement.getName().equals(value)) {
+                    elementsThatMatchSearch.add(allElement);
                 }
             }
         }
         if (fieldName.equals("number")) {
-            for (int i = 0; i < allElements.size(); i++) {
-                if (allElements.get(i).getNumber() == (int)value) {
-                    elementsThatMatchSearch.add(allElements.get(i));
+            for (Element allElement : allElements) {
+                if (allElement.getNumber() == (int) value) {
+                    elementsThatMatchSearch.add(allElement);
                 }
             }
         }
         if (fieldName.equals("phase")) {
-            for (int i = 0; i < allElements.size(); i++) {
-                if (allElements.get(i).getPhase().equals(value)) {
-                    elementsThatMatchSearch.add(allElements.get(i));
+            for (Element allElement : allElements) {
+                if (allElement.getPhase().equals(value)) {
+                    elementsThatMatchSearch.add(allElement);
                 }
             }
         }

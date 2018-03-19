@@ -30,9 +30,9 @@ public class UserCollection extends ArrayList<User>{
 
     public User attemptLogin(String email, String password) {
         try {
-            for (int i = 0; i < this.size(); i++) {
-                if (this.get(i).getEmail().equals(email) && this.get(i).getPassword().equals(Password.hashPassword(password))) {
-                    return this.get(i);
+            for (User user : this) {
+                if (user.getEmail().equals(email) && user.getPassword().getHash().equals(Password.hashPassword(password))) {
+                    return user;
                 }
             }
             throw new UserAuthenticationFailedException();
